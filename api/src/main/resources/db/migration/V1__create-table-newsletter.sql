@@ -1,0 +1,8 @@
+CREATE TABLE usuarios_newsletter (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR(100),
+    email VARCHAR(150) UNIQUE,
+    celular VARCHAR(20) UNIQUE,
+    data_cadastro TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    ativo BOOLEAN DEFAULT 1
+);
