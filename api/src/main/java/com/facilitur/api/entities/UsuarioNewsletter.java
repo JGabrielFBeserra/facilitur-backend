@@ -1,7 +1,8 @@
 package com.facilitur.api.entities;
 
-import com.facilitur.api.DTO.usuario_newsletter.CreateDTO;
+import com.facilitur.api.DTO.usuario_newsletter.CreateRequestDTO;
 import jakarta.persistence.*;
+import jakarta.validation.Valid;
 import lombok.*;
 
 @Getter
@@ -23,7 +24,7 @@ public class UsuarioNewsletter {
     private boolean ativo = true;
 
 
-    public UsuarioNewsletter(CreateDTO dados) {
+    public UsuarioNewsletter(@Valid CreateRequestDTO dados) {
         this.nome = dados.nome();
         this.email = dados.email();
         this.celular = dados.celular();
@@ -31,16 +32,13 @@ public class UsuarioNewsletter {
 
     }
 
-
     public void desativarUsuarioNewsletter(){
         System.out.println(this.ativo);
         this.ativo = false;
-        System.out.println("desativou");
     }
 
     public void ativarCasoJaExistaUsuarioNaNewsletter() {
         System.out.println(this.ativo);
         this.ativo = true;
-        System.out.println("ativou");
     }
 }
