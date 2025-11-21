@@ -1,4 +1,4 @@
-package com.facilitur.api.entities;
+package com.facilitur.api.models.entities;
 
 import com.facilitur.api.DTO.usuario_newsletter.CreateRequestDTO;
 import jakarta.persistence.*;

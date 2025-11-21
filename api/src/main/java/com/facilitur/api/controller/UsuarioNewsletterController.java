@@ -1,7 +1,7 @@
 package com.facilitur.api.controller;
 
 import com.facilitur.api.DTO.usuario_newsletter.*;
-import com.facilitur.api.entities.UsuarioNewsletter;
+import com.facilitur.api.models.entities.UsuarioNewsletter;
 import com.facilitur.api.service.UsuarioNewsletterService;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
