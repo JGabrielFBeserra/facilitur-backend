@@ -1,7 +1,7 @@
 package com.facilitur.api.service;
 
 import com.facilitur.api.DTO.usuario_newsletter.*;
-import com.facilitur.api.entities.UsuarioNewsletter;
+import com.facilitur.api.models.entities.UsuarioNewsletter;
 import com.facilitur.api.repository.UsuarioNewsletterRepository;
 import jakarta.transaction.Transactional;
 import jakarta.validation.Valid;

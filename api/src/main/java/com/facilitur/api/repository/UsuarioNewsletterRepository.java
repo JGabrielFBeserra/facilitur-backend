@@ -1,6 +1,6 @@
 package com.facilitur.api.repository;
 
-import com.facilitur.api.entities.UsuarioNewsletter;
+import com.facilitur.api.models.entities.UsuarioNewsletter;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

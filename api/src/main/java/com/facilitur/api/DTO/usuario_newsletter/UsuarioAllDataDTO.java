@@ -1,6 +1,6 @@
 package com.facilitur.api.DTO.usuario_newsletter;
 
-import com.facilitur.api.entities.UsuarioNewsletter;
+import com.facilitur.api.models.entities.UsuarioNewsletter;
 
 public record UsuarioAllDataDTO(
                          String nome,
