@@ -1,4 +1,4 @@
-package com.facilitur.api.entities;
+package com.facilitur.api.models.entities;
 
 import com.facilitur.api.models.enums.CategoriaEvento;
 import jakarta.persistence.Column;
@@ -14,8 +14,8 @@ import java.time.LocalTime;
 @NoArgsConstructor
 
 @Entity
-@DiscriminatorValuse("ESPORTIVO")
-public class EventoEsportivo extends com.facilitur.api.entities.Evento {
+@DiscriminatorValue("ESPORTIVO")
+public class EventoEsportivo extends com.facilitur.api.models.entities.Evento {
 
     @Column(name = "tipo_esporte", length = 100)
     private String tipoEsporte;
