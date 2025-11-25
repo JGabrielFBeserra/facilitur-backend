@@ -5,6 +5,7 @@ import jakarta.persistence.*;
 import lombok.*;
 
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.time.LocalTime;
 
 @Getter
@@ -22,23 +23,20 @@ public abstract class Evento {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
-    @Column(nullable = false, length = 200)
     private String nome;
-
-    @Column(name = "data_inicio", nullable = false)
-    private LocalDate dataInicio;
-
-    @Column(name = "data_fim", nullable = false)
-    private LocalDate dataFim;
-
-    @Column(nullable = false, length = 255)
+    @Column(name = "descricao_resumida")
+    private String descricaoResumida;
+    @Column(name = "descricao_detalhada")
+    private String descricaoDetalhada;
+    @Column(name = "data_inicio")
+    private LocalDateTime dataInicio;
+    @Column(name = "data_fim")
+    private LocalDateTime dataFim;
     private String local;
+    @Column(name = "link_mapa")
+    private String linkMapa;
+    private Boolean status;
+    @Column(name = "link_compra")
+    private String linkCompra;
 
-    @Column(nullable = false)
-    private LocalTime horario;
-
-    @Enumerated(EnumType.STRING)
-    @Column(nullable = false, insertable = false, updatable = false)
-    private CategoriaEvento categoria;
 }
