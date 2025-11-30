@@ -1,5 +1,6 @@
 package com.facilitur.api.controller;
 
+import com.facilitur.api.DTO.filiado.CreateRequestDTO;
 import jakarta.validation.Valid;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
@@ -12,8 +13,12 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequestMapping("/api/afiliado")
 public class FiliadoController {
 
+
+
     @PostMapping
-    public ResponseEntity<> cadastrarFiliado(@RequestBody @Valid CreateRequestDTO dados) {
+    public ResponseEntity<?> cadastrarFiliado(@RequestBody @Valid CreateRequestDTO dados) {
+
+
 
     }
 }
