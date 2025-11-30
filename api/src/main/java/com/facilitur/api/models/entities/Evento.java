@@ -1,4 +1,4 @@
-package com.facilitur.api.entities;
+package com.facilitur.api.models.entities;
 
 import com.facilitur.api.models.enums.CategoriaEvento;
 import jakarta.persistence.*;
