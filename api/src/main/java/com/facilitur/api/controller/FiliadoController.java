@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.util.UriComponentsBuilder;
 
 @Controller
 @RequestMapping("/api/afiliado")
@@ -16,9 +17,13 @@ public class FiliadoController {
 
 
     @PostMapping
-    public ResponseEntity<?> cadastrarFiliado(@RequestBody @Valid CreateRequestDTO dados) {
+    public ResponseEntity<CreateRequestDTO> cadastrar(@RequestBody @Valid CreateRequestDTO dados, UriComponentsBuilder uriBuilder) {
 
+        var medico = service.cadastrar(dados);
 
+        var uri = uriBuilder.path("medicos/{id}").buildAndExpand(medico.getId()).toUri();
+
+        return ResponseEntity.created(uri).body(new MedicoAllDataDTO(medico));
 
     }
 }

@@ -2,5 +2,5 @@ package com.facilitur.api.DTO.usuario_newsletter;
 
 import com.facilitur.api.models.entities.UsuarioNewsletter;
 
-public record CreateResponseDTO (UsuarioNewsletter usuario, boolean PostForCreateNewUsuarioResponseDTO, String mensagem){
+public record CreateResponseDTO (UsuarioNewsletter usuario, boolean response, String mensagem){
 }
