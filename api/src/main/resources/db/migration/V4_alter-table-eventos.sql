@@ -1,0 +1,3 @@
+ALTER TABLE eventos 
+ADD COLUMN modalidade VARCHAR(100),
+ADD COLUMN organizador VARCHAR(255);
