@@ -3,8 +3,8 @@ CREATE TABLE eventos (
     nome VARCHAR(255) NOT NULL, -- Nome do evento (obrigatório)
     descricao_resumida VARCHAR(500), -- Breve descrição
     descricao_detalhada TEXT, -- Descrição completa
-    data_inicio TIMESTAMP WITHOUT TIME ZONE NOT NULL, -- Data e hora de início (obrigatório)
-    data_fim TIMESTAMP WITHOUT TIME ZONE, -- Data e hora de término
+    data_inicio DATETIME NOT NULL,
+    data_fim DATETIME
     local VARCHAR(255), -- Local físico do evento
     link_mapa VARCHAR(255), -- URL para o mapa do local
     status BOOLEAN DEFAULT TRUE NOT NULL, -- Status do evento (ativo/inativo)
